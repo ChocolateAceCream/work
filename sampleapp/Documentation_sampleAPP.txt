@@ -1,0 +1,18 @@
+Admin account name: admin@kalki.com
+Admin password:foobar
+Admin power:
+1. Delete current user
+2. Create/Edit/Delete summary
+3. Create/Edit/Delete sites
+
+
+
+
+Model:
+User
+id: integer
+name: string, presence:true, length:maximum 50
+email: string, presence: true, length: maximum 255, format: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+       uniqueness: yes , case_sensitvie: false
+password: presence
+

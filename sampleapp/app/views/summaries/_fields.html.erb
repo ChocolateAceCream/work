@@ -1,0 +1,16 @@
+
+<%= render 'shared/error_messages', object: f.object %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :description %>
+<%= f.text_field :description, class: 'form-control' %>
+
+<%= f.label :users %>
+<%= select_tag "selected_user", options_from_collection_for_select(User.all, 'id', 'name',@summary.users.map{ |j| j.id }), :multiple => true %>
+
+<%= f.label :sites %>
+<%= select_tag "selected_site", options_from_collection_for_select(Site.all, 'id', 'name',@summary.sites.map{ |j| j.id }), :multiple => true %>
+
+<%= f.label :emails %>
+<%= select_tag "selected_email", options_from_collection_for_select(Email.all, 'id', 'server_name',@summary.emails.map{ |j| j.id }), :multiple => true %>

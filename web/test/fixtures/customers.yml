@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  name: MyString
+  address_line1: MyString
+  address_line2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  mtd_sales: 1
+  ytd_sales: MyString
+  current_balance: 1
+  credit_limit: 1
+  ship_to_addr: MyString
+
+two:
+  number: 1
+  name: MyString
+  address_line1: MyString
+  address_line2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  mtd_sales: 1
+  ytd_sales: MyString
+  current_balance: 1
+  credit_limit: 1
+  ship_to_addr: MyString

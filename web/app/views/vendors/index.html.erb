@@ -1,0 +1,35 @@
+<% provide(:title, 'All territories')%>
+<h1>All Vendors</h1>
+<%= link_to 'New Vendor', new_vendor_path %>
+<table>
+  <tr>
+    <th>vendor_number&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>vendor_name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>address&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>city&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>state&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>zip&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>vendor_part_number&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>part_charges&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>minimum_order&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>deliver_date&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @vendors.each do |vendor| %>
+    <tr>
+      <td><%= vendor.vendor_number %></td>
+      <td><%= vendor.vendor_name %></td>
+      <td><%= vendor.address %></td>
+      <td><%= vendor.city %></td>
+      <td><%= vendor.state %></td>
+      <td><%= vendor.zip %></td>
+      <td><%= vendor.vendor_part_number %></td>
+      <td><%= vendor.part_charges %></td>
+      <td><%= vendor.minimum_order %></td>
+      <td><%= vendor.deliver_date %></td>
+      
+      <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
+    </tr>
+  <% end %>
+</table>

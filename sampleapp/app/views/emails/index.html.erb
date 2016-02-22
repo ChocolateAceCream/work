@@ -1,0 +1,38 @@
+<% provide(:title, 'All Email Server')%>
+<h1>All Email Servers</h1>
+<% if current_user.admin?  %>
+  <%= link_to 'New Email Server', new_email_path %>
+<% end %>
+
+<table class="table table-striped">
+  <tr>
+    <th>server name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>imap&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>imap port&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>smtp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>smtp port&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>testing acount name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>testing account password&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>last update&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @emails.each do |email| %>
+    <tr>
+      <td><%= email.server_name %></td>
+      <td><%= email.imap %></td>
+      <td><%= email.imap_port %></td>   
+      <td><%= email.smtp %></td>   
+      <td><%= email.smtp_port %></td>   
+      <td><%= email.account_name %></td>
+      <td><%= email.account_password %></td>   
+      <td><%= time_ago_in_words(email.updated_at) %></td>
+
+      <% if current_user.admin?  %>
+          <td><%= link_to 'Edit', edit_email_path(email) %></td>
+          <td><%= link_to "delete", email, method: :delete, data: { confirm: "You sure?" } %></td>
+      <% end %>   
+
+    </tr>
+  <% end %>
+</table>

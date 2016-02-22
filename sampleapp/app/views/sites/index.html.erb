@@ -1,0 +1,35 @@
+<% provide(:title, 'All Sites')%>
+<h1>All Sites</h1>
+<% if current_user.admin?  %>
+  <%= link_to 'New Sites', new_site_path %>
+<% end %>
+
+<table class="table table-striped">
+  <tr>
+    <th>id&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>description&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>ping&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>ip&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>updated at&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @sites.each do |site| %>
+    <tr>
+      <td><%= site.id %></td>
+      <td><%= site.name %></td>
+      <td><%= site.description %></td>   
+      <td><%= site.ping %></td>   
+      <td><%= site.ip %></td>   
+      <td><%= time_ago_in_words(site.updated_at) %></td>
+
+      <% if current_user.admin?  %>
+          <td><%= link_to 'Edit', edit_site_path(site) %></td>
+          <td><%= link_to "delete", site, method: :delete, data: { confirm: "You sure?" } %></td>
+      <% end %>   
+
+    </tr>
+  <% end %>
+</table>

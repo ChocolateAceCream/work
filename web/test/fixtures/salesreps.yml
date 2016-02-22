@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sales_rep_number: 1
+  sales_rep_name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  mtd_sales: MyString
+  ytd_sales: MyString
+  mtd_commission: MyString
+  ytd_commission: MyString
+  commission_rate: MyString
+
+two:
+  sales_rep_number: 1
+  sales_rep_name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  mtd_sales: MyString
+  ytd_sales: MyString
+  mtd_commission: MyString
+  ytd_commission: MyString
+  commission_rate: MyString

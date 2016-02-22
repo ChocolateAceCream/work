@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vendor_number: 1
+  vendor_name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  vendor_part_number: 1
+  part_charges: 1
+  minimum_order: 1
+  deliver_date: 2015-12-09
+
+two:
+  vendor_number: 1
+  vendor_name: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  vendor_part_number: 1
+  part_charges: 1
+  minimum_order: 1
+  deliver_date: 2015-12-09

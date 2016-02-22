@@ -1,0 +1,11 @@
+<% provide(:title, 'new part')%>
+<h1>new part</h1>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@part) do |f| %>
+            <%= render 'fields', :f=> f %>
+            <%= f.submit "Create part", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+
+</div>

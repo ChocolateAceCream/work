@@ -1,0 +1,6 @@
+= blink
+
+Describe your project here
+
+:include:blink.rdoc
+

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  territory_id: 1
+  sales_rep_id: 1
+
+two:
+  territory_id: 1
+  sales_rep_id: 1

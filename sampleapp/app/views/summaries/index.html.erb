@@ -1,0 +1,26 @@
+<% provide(:title, 'Summaries')%>
+<h1>Summaries</h1>
+<% if current_user.admin?  %>
+    <%= link_to 'Create New', new_summary_path %>
+<% end %>
+<table class="table table-striped">
+  <tr>
+    <th>Summary ID</th>
+    <th>Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>Description&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th colspan="5"></th>
+  </tr>
+ 
+  <% @summaries.each do |summary| %>
+    <tr>
+      <td><%= summary.id %></td>
+      <td><%= summary.name %></td>      
+      <td><%= summary.description %></td>         
+      <td><%= link_to 'Show', display_summary_path(summary) %></td>
+      <% if current_user.admin?  %>
+          <td><%= link_to 'Edit', edit_summary_path(summary) %></td>
+          <td><%= link_to "delete", summary, method: :delete, data: { confirm: "You sure?" } %></td>
+      <% end %>      
+    </tr>
+  <% end %>
+</table>

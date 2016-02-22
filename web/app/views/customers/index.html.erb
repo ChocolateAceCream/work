@@ -1,0 +1,39 @@
+ <% provide(:title, 'All territories')%>
+<h1>All Customers</h1>
+<%= link_to 'New Customer', new_customer_path %>
+<table class="table table-striped">
+  <tr>
+    <th>number&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>salesrep&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>address_line1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>address_line2&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>city&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>state&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>zip&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>mtd_sales&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>ytd_sales&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>current_balance&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th>credit_limit&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   </th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @customers.each do |customer| %>
+    <tr>
+      <td><%= customer.number %></td>
+      <td><%= customer.name %></td>
+      <td><%= customer.salesrepnumber %></td>
+      <td><%= customer.address_line1 %></td>
+      <td><%= customer.address_line2 %></td>
+      <td><%= customer.city %></td>
+      <td><%= customer.state %></td>
+      <td><%= customer.zip %></td>
+      <td><%= customer.mtd_sales %></td>
+      <td><%= customer.ytd_sales %></td>
+      <td><%= customer.current_balance %></td>
+      <td><%= customer.credit_limit %></td>
+      
+      <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    </tr>
+  <% end %>
+</table>

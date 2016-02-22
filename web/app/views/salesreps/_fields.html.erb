@@ -1,0 +1,41 @@
+<%= render 'shared/error_messages', object: f.object %>
+
+<%= f.label :sales_rep_name %>
+<%= f.text_field :sales_rep_name, class: 'form-control' %>
+
+<%= f.label :sales_rep_number %>
+<%= f.text_field :sales_rep_number, class: 'form-control' %>
+
+
+<%= f.label :territorynumber %>
+<%= f.collection_select :territorynumber, Territory.all,:number,:number, include_blank: true %>
+
+
+<%= f.label :address %>
+<%= f.text_field :address, class: 'form-control' %>
+
+<%= f.label :city %>
+<%= f.text_field :city, class: 'form-control' %>
+
+<%= f.label :state %>
+<%= f.text_field :state, class: 'form-control' %>
+
+<%= f.label :zip %>
+<%= f.text_field :zip, class: 'form-control' %>
+
+<%= f.label :mtd_sales %>
+<%= f.text_field :mtd_sales, class: 'form-control' %>
+
+<%= f.label :ytd_sales %>
+<%= f.text_field :ytd_sales, class: 'form-control' %>
+
+<%= f.label :mtd_commission %>
+<%= f.text_field :mtd_commission, class: 'form-control' %>
+
+<%= f.label :ytd_commission %>
+<%= f.text_field :ytd_commission, class: 'form-control' %>
+
+<%= f.label :commission_rate %>
+<%= f.text_field :commission_rate, class: 'form-control' %>
+
+

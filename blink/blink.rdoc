@@ -1,0 +1,5 @@
+= blink
+
+Generate this with
+    blink rdoc
+After you have described your command line interface
