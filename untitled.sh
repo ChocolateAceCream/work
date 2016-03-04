@@ -1,1 +1,0 @@
-curl GET user_name:passwordhttp://#{@host_server}:port_number/api//
