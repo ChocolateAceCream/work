@@ -9,7 +9,7 @@ require 'time'
 #_________________________________________________
 
 user='di.sheng'
-password = 'Di880817'
+password = '*********'
 wiki_url = 'https://cyb3rk4lk1pil0t.atlassian.net/wiki/'
 space_key = "DEMO"
 page_title = "Daily report for emails"
